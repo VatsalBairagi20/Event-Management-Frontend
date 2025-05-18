@@ -44,7 +44,7 @@ const CreateAccount = () => {
     setMessage(""); // Clear previous messages
 
     try {
-      await axios.post("http://localhost:5000/api/users/create", {
+      await axios.post("https://event-management-backend-w0u6.onrender.com/api/users/create", {
         enrollment: formData.enrollment,
         name: formData.name,
         email: formData.email,
