@@ -11,7 +11,7 @@ const Events = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/events")
+      .get("https://event-management-backend-w0u6.onrender.com/api/events")
       .then((response) => {
         const allEvents = response.data;
         const currentDate = new Date();
