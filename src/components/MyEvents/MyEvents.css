@@ -1,0 +1,122 @@
+.my-events-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #212529; /* Solid dark gray background */
+    min-height: 100vh;
+    border-radius: 10px; /* Slightly smaller radius for simplicity */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    color: #ced4da; /* Light gray text */
+  }
+  
+  .my-events-title {
+    color: #17a2b8; /* Cool cyan for the title */
+    text-align: center;
+    font-size: 2.2rem; /* Slightly smaller for a cleaner look */
+    font-weight: 600;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    animation: my-events-fadeIn 1s ease-in-out;
+  }
+  
+  .my-events-loading {
+    color: #adb5bd; /* Muted gray for loading text */
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+  
+  .my-events-error {
+    color: #dc3545; /* Simple red for errors */
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    background-color: #2d1b1b; /* Dark red background */
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(220, 53, 69, 0.2);
+  }
+  
+  .my-events-content {
+    padding: 10px;
+  }
+  
+  .my-events-count {
+    color: #17a2b8; /* Matching cyan for consistency */
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .my-events-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .my-events-card {
+    background: #343a40; /* Darker gray for cards */
+    border: none;
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .my-events-card:hover {
+    transform: translateY(-5px); /* Subtle lift */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Slightly deeper shadow */
+  }
+  
+  .my-events-card-title {
+    margin: 0 0 12px;
+    color: #17a2b8; /* Cyan for titles */
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+  
+  .my-events-card-date,
+  .my-events-card-status {
+    color: #adb5bd; /* Muted gray for text */
+    font-size: 1rem;
+    margin: 8px 0;
+    line-height: 1.4;
+  }
+  
+  .my-events-card-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-top: 12px;
+    transition: transform 0.3s ease;
+    border: 1px solid #495057; /* Darker border */
+  }
+  
+  .my-events-card-image:hover {
+    transform: scale(1.03); /* Smaller zoom for subtlety */
+  }
+  
+  .my-events-empty {
+    color: #adb5bd;
+    text-align: center;
+    font-size: 1.1rem;
+    margin-top: 20px;
+  }
+  
+  /* Animation keyframes */
+  @keyframes my-events-fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

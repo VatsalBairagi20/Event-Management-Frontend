@@ -1,0 +1,204 @@
+/* LoginPage.css */
+
+/* General Container Styles */
+.account-container, .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #0a0a23 0%, #1a1a47 100%); /* Matches landing page */
+    overflow: hidden;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Dynamic Background Effect */
+  .account-container::before, .login-container::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, #007bff, #00ddeb, #ff3b30, #ff6b6b);
+    clip-path: circle(40% at 80% 20%);
+    z-index: 0;
+    opacity: 0.25;
+    animation: pulseGlow 8s infinite ease-in-out;
+  }
+  
+  /* Form Box */
+  .form-box, .login-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px); /* Enhanced glassmorphism */
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 123, 255, 0.2), 0 0 50px rgba(255, 59, 48, 0.1);
+    max-width: 480px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+    animation: slideUp 0.8s ease-out;
+  }
+  
+  .form-box::after, .login-box::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+    z-index: -1;
+    transform: rotate(30deg);
+  }
+  
+  /* Heading */
+  .form-box h2, .login-box h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: -webkit-linear-gradient(45deg, #00ddeb, #007bff); /* Matches landing page */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 10px rgba(0, 123, 255, 0.5);
+  }
+  
+  /* Input Group */
+  .input-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    outline: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    font-style: italic;
+  }
+  
+  .input-group input:focus {
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.4);
+    border: 1px solid #007bff;
+  }
+  
+  /* Submit Button */
+  .submit-btn, .login-button {
+    background: linear-gradient(45deg, #ff3b30, #ff6b6b); /* Ties to landing page register button */
+    color: #fff;
+    border: none;
+    padding: 14px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 15px rgba(255, 59, 48, 0.4);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .submit-btn:hover, .login-button:hover {
+    background: linear-gradient(45deg, #cc2b23, #ff3b30);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 59, 48, 0.6);
+  }
+  
+  .submit-btn::after, .login-button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+  }
+  
+  .submit-btn:hover::after, .login-button:hover::after {
+    width: 300%;
+    height: 300%;
+  }
+  
+  /* Checkbox Group */
+  .check-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .check-group input {
+    margin-right: 12px;
+    accent-color: #007bff; /* Custom checkbox color */
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+  
+  .check-group label {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  /* Animations */
+  @keyframes pulseGlow {
+    0%, 100% { opacity: 0.25; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(1.05); }
+  }
+  
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .form-box, .login-box {
+      padding: 2rem;
+      max-width: 90%;
+      border-radius: 15px;
+    }
+  
+    .form-box h2, .login-box h2 {
+      font-size: 1.8rem;
+    }
+  
+    .input-group input {
+      padding: 12px;
+    }
+  
+    .submit-btn, .login-button {
+      padding: 12px 15px;
+      font-size: 1rem;
+    }
+  }
