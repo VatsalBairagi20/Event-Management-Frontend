@@ -36,31 +36,32 @@ const Login = () => {
     <div className="login-container">
       <div className="login-box">
         <h2>Login</h2>
-        <form onSubmit={handleLogin}>
-          <div className="input-group">
-            <label>Enrollment</label>
-            <input
-              type="enrollment"
-              placeholder="Enter your enrollment"
-              value={enrollment}
-              onChange={(e) => setenrollment(e.target.value)}
-              required
-            />
-          </div>
-          <div className="input-group">
-            <label>Password</label>
-            <input
-              type="password"
-              placeholder="Enter your password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
-          </div>
-          <button type="submit" className="login-button" onClick={handleLogin}>
-            Login
-          </button>
-        </form>
+       <form onSubmit={handleLogin}>
+  <div className="input-group">
+    <label>Enrollment</label>
+    <input
+      type="text"
+      placeholder="Enter your enrollment"
+      value={enrollment}
+      onChange={(e) => setenrollment(e.target.value)}
+      required
+    />
+  </div>
+  <div className="input-group">
+    <label>Password</label>
+    <input
+      type="password"
+      placeholder="Enter your password"
+      value={password}
+      onChange={(e) => setPassword(e.target.value)}
+      required
+    />
+  </div>
+  <button type="submit" className="login-button">
+    Login
+  </button>
+</form>
+
       </div>
     </div>
   );
