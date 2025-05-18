@@ -18,7 +18,7 @@ const MyEvents = () => {
           return;
         }
 
-        const response = await axios.get("http://localhost:5000/api/users/registered-events", {
+        const response = await axios.get("https://event-management-backend-w0u6.onrender.com/api/users/registered-events", {
           headers: { Authorization: token },
         });
 
@@ -56,7 +56,7 @@ const MyEvents = () => {
                   </p>
                   {event.eventPic && (
                     <img
-                      src={`http://localhost:5000/uploads/${event.eventPic}`}
+                      src={`https://event-management-backend-w0u6.onrender.com/uploads/${event.eventPic}`}
                       alt={event.eventName}
                       className="my-events-card-image"
                     />
