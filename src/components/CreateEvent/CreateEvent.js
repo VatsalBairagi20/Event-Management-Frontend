@@ -43,7 +43,7 @@ const CreateEvent = () => {
         formDataToSend.append(key, formData[key]); // Append all formData fields
       });
   
-      const response = await axios.post("http://localhost:5000/api/events/create", formDataToSend, {
+      const response = await axios.post("https://event-management-backend-w0u6.onrender.com/api/events/create", formDataToSend, {
         headers: {
           Authorization: token, // Pass the token in the Authorization header
           "Content-Type": "multipart/form-data",
